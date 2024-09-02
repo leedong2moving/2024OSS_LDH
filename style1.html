@@ -1,17 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        body{
+            font : 100% Lucida Sans, Verdana;
+            margin: 20px;
+            line-height:26px;
+        }
+        .container{
+            min-width: 900px;
+        }
+        .wrapper{
+            position:relative;
+            overflow:auto;
+        }
+        #top, #sidebar, #paragraph, .menuitem{
+            border-radius: 4px;
+            margin:4px;
+        }
+        #top{
+            background-color: #04AA6D;
+            color:#ffffff;
+            padding:15px;
+        }
+        #menu{
+            width:200px;
+            float:left;
+        }
+        #main{
+            padding :10px;
+            margin-right: 200px;
+        }
+
+        #side{
+            background-color: #32a4e7;
+            color:#ffffff;
+            padding : 10px;
+            width:180px;
+            float : right;
+            margin-top : 10;
+        }
+        #paragraph{
+            border:1 px solid#d4d4d4;
+            background-color:#f1f1f1;
+            text-align:center;
+            padding:10px;
+            font-size:70%;
+            line-height:14px;
+        }
+        #top h1, #top p, #menulist{
+            margin: 0;
+            padding: 0;
+        }
+        .menuitem{
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            list-style-type : none;
+            padding : 2px;
+            cursor:pointer;
+        }
+        .menuitem:hover{
+            background-color : #ffffff;
+        }
+        .menuitem:first-child{
+            background-color:#04AA6D;
+            color:white;
+            font-weight:bold;
+        }
+        a{
+            color: #000000;
+            text-decoration: underline;
+        }
+        a:hover{
+            text-decoration:none;
+        }
+        @media(max-width: 700px){
+            #sidebar{
+                width: auto;
+                position: relative;
+            }
+            #main{
+                margin-right :0;
+            }
+        }
+        @media (max-width: 600px){
+            #menubar{
+                width:auto;
+                float:none;
+            }
+            #main{
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container wrapper">
     <div id = "top">
         <h1>Welcome to 21600490's Homepage</h1>
     <p>Use the menu to select different Sytlesheets</p>
     </div>
     <div id = "menu">
-        <li class="menuitem" onclick ="window.location.href='style1.html'">
+        <li class="menuitem" onclick=" reStyle(0)">
             Stylesheet 1
         </li>
         <li class="menuitem" onclick=" reStyle(1)">
@@ -63,6 +153,6 @@
         qui blandit praesent luptatum zzril delenit augue duis dolore 
         te feugait nulla facilisi.
     </div>
-    
+    </div>
 </body>
 </html>
