@@ -4,108 +4,73 @@
     <style>
         body {
             font: 100% Lucida Sans, Verdana;
+            background-color: #d14836;
             margin: 20px;
             line-height: 26px;
         }
+        .container {
+            min-width:900px;
+        }
 
         #top {
-            background-color: #04AA6D;
-            color: #ffffff;
+            color : #ffffff;
             padding: 15px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
+            font-size :30px;
+            line-height : 26px;
+        }
+        #top h1{
+            margin:0;
+            line-height:50px;
         }
 
-        .container {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 10px;
-            width: 100%;
+        #menu{
+            width: 190px;
+            float :right;
         }
-
-        #menu, #main, #side {
+        #main{
             padding: 10px;
-            box-sizing: border-box;
-            border-radius: 4px;
+            background-color: #ffffff;
+            font : 80% Verdana;
+        }
+        #main h1, #main h2{
+            color : #d14836;
+        }
+        #side{
+            background-color : #F6DAD7;
+            color : #d14836;
+            padding: 10px;
         }
 
-        #menu {
-            background-color: #f1f1f1;
-            flex: 1 1 20%;
-            max-width: 20%;
-        }
-
-        #main {
-            flex: 2 1 60%;
-            max-width: 60%;
-        }
-
-        #side {
-            background-color: #32a4e7;
-            color: #ffffff;
-            flex: 1 1 20%;
-            max-width: 20%;
-        }
-
-        #paragraph {
-            background-color: #f1f1f1;
+        #paragraph{
             text-align: center;
             padding: 10px;
             font-size: 70%;
-            line-height: 14px;
-            margin-top: 10px;
-            box-sizing: border-box;
-            width: 100%;
+            color: #ffffff;
         }
-
-        .menuitem {
-            background-color: #f1f1f1;
-            padding: 2px;
-            cursor: pointer;
-            margin-bottom: 5px;
-            list-style-type: none;
-            border: 1px solid #d4d4d4;
+        #menulist{
+            padding:0;
+            font: 16px verdana;
         }
-
-        .menuitem:hover {
-            background-color: #ffffff;
+        .menuitem{
+            width: 155px;
+            background-color: #d14836;
+            border: 1px solid #d14836;
+            border-radius: 40px;
+            color: #ffffff;
+            list-style-type:none;
+            margin: 10px;
+            padding: 5px;
+            text-align:center;
+            cursor:pointer;
         }
-
-        .menuitem:first-child {
-            background-color: #04AA6D;
-            color: white;
-            font-weight: bold;
-        }
-
-        a {
-            color: #000000;
-            text-decoration: underline;
-        }
-
-        a:hover {
+        a{
+            color: #d14836;
             text-decoration: none;
         }
-
-        /* 반응형 디자인 */
-        @media (max-width: 1000px) {
-            .container {
-                flex-wrap: wrap;
-            }
-            #menu, #main, #side {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
+        a:hover{
+            text-decoration:underline;
         }
-
-        @media (max-width: 600px) {
-            #top, .menuitem, #paragraph {
-                font-size: 90%;
-            }
-
-            #paragraph {
-                font-size: 60%;
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -146,7 +111,7 @@
             <p>This page uses DIV elements to group different sections of the HTML page.
                 Click here to see how the page looks like with no stylesheet:
                 <br>
-                <a href="#" onclick="window.location.href='index.html'">No Stylesheet</a>
+                <a href="#" onclick="noStyles();return false">No Stylesheet</a>
             </p>
         </div>
         <div id="side">
